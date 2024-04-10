@@ -11,15 +11,21 @@
 import SougouSpider
 import Scel2Txt
 import os
+import Scel2dict
 
 # 下载类别
-Categories = ['城市信息:167', '自然科学:1', '社会科学:76', '工程应用:96', '农林渔畜:127', '医学医药:132',
-              '电子游戏:436', '艺术设计:154', '生活百科:389', '运动休闲:367', '人文科学:31', '娱乐休闲:403']
+# Categories = ['城市信息:167', '自然科学:1', '社会科学:76', '工程应用:96', '农林渔畜:127', '医学医药:132',
+#               '电子游戏:436', '艺术设计:154', '生活百科:389', '运动休闲:367', '人文科学:31', '娱乐休闲:403']
+Categories = ['城市信息:167', '自然科学:1', '社会科学:76', '工程应用:96', 
+              '生活百科:389','人文科学:31', ]
 # Scel保存路径
-SavePath = r"f:\Users\QQT\Documents\Temp\scel1"
+SavePath = r"scel"
 
 # TXT保存路径
-txtSavePath = r"f:\Users\QQT\Documents\Temp\txt1"
+txtSavePath = r"txt"
+
+# dict保存路径(fcitx5需要这个格式)
+dictSavePath = r"dict"
 
 # 开始链接
 startUrl = "https://pinyin.sogou.com/dict/cate/index/436"
@@ -82,7 +88,10 @@ def main():
                         SGSpider.Download(urlDownload, filePath)
                         print(keyDownload + " 保存成功......")
     # 转scel为txt
-    Scel2Txt.batch_file(SavePath, txtSavePath)
+    # Scel2Txt.batch_file(SavePath, txtSavePath)
+
+    # 转dict
+    Scel2dict.scel2dict(SavePath, dictSavePath)
     print("任务结束...")
 
 

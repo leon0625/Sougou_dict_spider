@@ -77,3 +77,8 @@
     
 
 
+## 批量复制
+```bash
+# 复制所有推荐词库
+fdfind 推荐 dict/ -x cp {} ~/.local/share/fcitx5/pinyin/dictionaries/
+```
