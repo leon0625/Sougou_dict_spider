@@ -3,6 +3,12 @@
 
 > 把人类从重复的劳动中解放出来，去创造新的事物。
 
+## 依赖
+依赖scel2org5，需要安装fcitx5-chinese-addons-bin  
+ubuntu上安装命令为：  
+```
+sudo apt install fcitx5-chinese-addons-bin
+```
 
 ## 简介(Introduction)
 

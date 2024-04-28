@@ -1,5 +1,6 @@
 # Scel格式转fcitx5识别的dict格式
 # 借助/usr/bin/scel2org5和/usr/bin/libime_pinyindict实现
+# scel2org5需要安装fcitx5-chinese-addons-bin
 
 import os,sys
 import subprocess
